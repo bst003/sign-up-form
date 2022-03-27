@@ -52,7 +52,7 @@ aside{
     display: flex;
     flex-direction: column;
     width: 35%;
-    padding: 150px 0px 20px;
+    padding: max(150px, 18vh) 0px 20px;
     background-image: url('../img/mathias-p-r-reding-IEpyWlEEoQ4-unsplash.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -96,5 +96,4 @@ aside{
     width: 65%;}
 
 .main-content .inner{
-    /* padding: max(125px, 15vh) max(20px, 5%); */
-    padding: 100px 40px;}
+    padding: max(100px, 15vh) 40px;}
