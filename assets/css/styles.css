@@ -1,0 +1,27 @@
+/*
+Base Styles & Universal Elements
+*/
+
+@font-face {
+    font-family: 'Norse';
+    font-weight: bold;
+    src: url('../fonts/Norse-Bold.otf');
+}
+
+:root {
+    /*COLORS*/
+    --burnt-sienna: #E1774D;
+    --burnt-umber: #864027;
+    --light-gray: #f9fafb;
+    --light-gray-alt: #E5E7EB;
+    --dark-burnt-umber: #330000;
+    --almost-white: #fefefe;
+    --persian-green: #1B998B;
+    
+    /*FONTS*/
+    --font-primary: 'Poppins', sans-serif;
+    --font-alt: 'Norse', sans-serif;
+
+    /*USE CASES*/
+    --font-color-base: var(--dark-burnt-umber);}
+
