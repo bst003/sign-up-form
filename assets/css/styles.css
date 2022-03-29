@@ -113,7 +113,7 @@ aside{
     overflow: hidden;
     background-color: var(--light-gray);}
     .main-content .inner{
-        --inner-hori-padding: 45px;
+        --inner-hori-padding: max(45px, 3.2vw);
 
 
         display: block;
