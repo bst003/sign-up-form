@@ -135,7 +135,7 @@ main{
 aside{
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: 38%;
     padding: max(150px, 18vh) 0px 20px;
     background-image: url('../img/mathias-p-r-reding-IEpyWlEEoQ4-unsplash.jpg');
     background-repeat: no-repeat;
@@ -153,7 +153,7 @@ aside{
 .main-content{
     display: flex;
     align-items: stretch;
-    width: 65%;
+    width: 62%;
     overflow: hidden;
     background-color: var(--light-gray);}
     .main-content .inner{
