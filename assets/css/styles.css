@@ -24,12 +24,17 @@ Base Styles & Universal Elements
 
     /*USE CASES*/
     --button-bg: var(--burnt-sienna);
+    --button-bg-state: var(--burnt-umber);
     --font-color-base: var(--dark-burnt-umber);
-    --link-color: var(--burnt-sienna);}
+    --link-color: var(--burnt-sienna);
+    --link-color-state: var(--burnt-umber);
+    --border-radius: 5px;}
 
 html{
-    height: 100%;
-}
+    height: 100%;}
+    html * {
+        box-sizing: border-box;}
+
 
 body{
     height: min(100%, 100vh);
@@ -68,23 +73,62 @@ Re-Used Elements
         width: min(95px, 40%);}
 
 
+.direct-wrap{}
+    .direct-wrap > *:first-child{
+        margin-top: 0px;}
+    .direct-wrap > *:last-child{
+        margin-bottom: 0px;}
+
+button{
+    cursor: pointer;
+    padding: 12px 20px;
+    text-align: center;
+    border: initial;
+    border-radius: var(--border-radius);
+    background-color: var(--button-bg);
+    color: #fff;
+    font-weight: 700;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;}
+    button:hover,
+    button:active,
+    button:focus{
+        background-color: var(--button-bg-state);
+        -webkit-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;}
+
 /*
 Text Elements
 */
 
 p{
+    font-weight: 500;
     margin: 24px 0px;}
     p.large{
         font-size: 1.5rem;
         font-weight: 600;}
 
+a{
+    color: var(--link-color);
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;}
+    a:hover,
+    a:active,
+    a:focus{
+        color: var(--link-color-state);
+        -webkit-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;}
 
 /*
 Content Structuring
 */
 
 main{
-    height: 100%;
+    min-height: 100%;
+    height: auto;
     display: flex;
     align-items: stretch;}
 
@@ -118,7 +162,7 @@ aside{
 
         display: block;
         width: 100%;
-        padding: max(100px, 15vh) var(--inner-hori-padding);}
+        padding: max(100px, 14vh) var(--inner-hori-padding);}
 
     .main-content .top-content{
         margin: 0px 0px 40px;
@@ -126,7 +170,7 @@ aside{
         width: 100%;}
 
     .main-content .inner .band-content{
-        padding: 16px 0px;
+        padding: 20px 0px 24px;
         position: relative;}
         .main-content .inner .band-content::before{
             content: "";
@@ -148,7 +192,16 @@ aside{
 Form
 */
 
+.fields-contain{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 16px;
+    column-gap: 8%;}
+
 fieldset{
+    max-width: 700px;
+    width: 100%;
+
     margin-inline-start: 0;
     margin-inline-end: 0;
     padding-block-start: 0;
@@ -157,3 +210,32 @@ fieldset{
     padding-inline-end: 0;
     border: none;
     min-inline-size: min-content;}
+
+legend{
+    margin: 0px 0px 20px;
+    font-size: 1.5rem;
+    font-weight: 600;}
+
+label{
+    display: block;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: .8;}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=password]{
+    width: 100%;
+    border: 2px solid var(--light-gray-alt);
+    border-radius: var(--border-radius);
+    outline: initial;
+    height: 40px;}
+    input[type=text]:focus,
+    input[type=email]:focus,
+    input[type=tel]:focus,
+    input[type=password]:focus{
+        border-color: var(--persian-green);}
+
+form button{
+    margin: 32px 0px 0px;}
