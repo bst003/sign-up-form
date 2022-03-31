@@ -236,6 +236,16 @@ input[type=password]{
     input[type=tel]:focus,
     input[type=password]:focus{
         border-color: var(--persian-green);}
+    input[type=text].error,
+    input[type=email].error,
+    input[type=tel].error,
+    input[type=password].error{
+        border-color: red;}
+
+span.error{
+    display: block;
+    color: red;
+    font-size: .875rem;}
 
 form button{
     margin: 32px 0px 0px;}

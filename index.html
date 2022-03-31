@@ -76,10 +76,10 @@
                                 
                                 <div class="field">
                                     <label for="phone">Phone</label>
-                                    <input id="phone" name="phone" type="tel" required />
+                                    <input id="phone" name="phone" type="tel" pattern="\d{10}|(\d{3})([-]{1}|[ ]{1})(\d{3})([-]{1}|[ ]{1})(\d{4})" required />
                                 </div>
 
-                                <div class="field">
+                                <div class="field pw-field">
                                     <label for="pw">Password</label>
                                     <input id="pw" name="pw" type="password" required />
                                 </div>
@@ -93,7 +93,7 @@
                         </fieldset>
                     </div>
 
-                    <button type="submit">
+                    <button class="submit" type="submit">
                         Create Account
                     </button>
 
@@ -112,5 +112,6 @@
 
     </main>
     
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>
