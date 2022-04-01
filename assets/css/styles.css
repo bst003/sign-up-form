@@ -235,6 +235,10 @@ legend{
     font-size: 1.5rem;
     font-weight: 600;}
 
+.field{
+    position: relative;
+}
+
 label{
     display: block;
     font-weight: 600;
@@ -245,21 +249,40 @@ input[type=text],
 input[type=email],
 input[type=tel],
 input[type=password]{
+    padding-right: 32px;
     width: 100%;
     border: 2px solid var(--light-gray-alt);
     border-radius: var(--border-radius);
     outline: initial;
     height: 40px;}
+
     input[type=text]:focus,
     input[type=email]:focus,
     input[type=tel]:focus,
     input[type=password]:focus{
         border-color: var(--persian-green);}
+    input[type=text]:valid + .validity::before,
+    input[type=email]:valid + .validity::before,
+    input[type=tel]:valid + .validity::before,
+    input[type=password]:valid + .validity::before{
+        opacity: 1;}
+
     input[type=text].error,
     input[type=email].error,
     input[type=tel].error,
     input[type=password].error{
         border-color: red;}
+
+.validity::before{
+    content: "\f00c";
+    color:  var(--persian-green);
+    font-family: 'Font Awesome 5 Free';
+    font-size: 1.25rem;
+    font-weight: 900;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    opacity: 0;}
 
 span.error{
     display: block;

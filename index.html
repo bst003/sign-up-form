@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5899fa846f.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -61,22 +63,26 @@
                             <div class="fields-contain">
                                 <div class="field">
                                     <label for="first-name">First Name</label>
-                                    <input id="first-name" name="first-name" type="text" required />
+                                    <input id="first-name" name="first-name" type="text" placeholder="Luke" required />
+                                    <span class="validity"></span>
                                 </div>
 
                                 <div class="field">
                                     <label for="last-name">Last Name</label>
-                                    <input id="last-name" name="last-name" type="text" required />
+                                    <input id="last-name" name="last-name" type="text" placeholder="Skywalker" required />
+                                    <span class="validity"></span>
                                 </div>
 
                                 <div class="field">
                                     <label for="email">Email</label>
-                                    <input id="email" name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+                                    <input id="email" name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="test@mail.com" required />
+                                    <span class="validity"></span>
                                 </div>
                                 
                                 <div class="field">
                                     <label for="phone">Phone</label>
-                                    <input id="phone" name="phone" type="tel" pattern="\d{10}|(\d{3})([-]{1}|[ ]{1})(\d{3})([-]{1}|[ ]{1})(\d{4})" required />
+                                    <input id="phone" name="phone" type="tel" pattern="\d{10}|(\d{3})([-]{1}|[ ]{1})(\d{3})([-]{1}|[ ]{1})(\d{4})" placeholder="222-333-4444" required />
+                                    <span class="validity"></span>
                                 </div>
 
                                 <div class="field pw-field">
@@ -87,6 +93,7 @@
                                 <div class="field">
                                     <label for="pw-confirm">Confirm Password</label>
                                     <input id="pw-confirm" name="pw-confirm" type="password" minlength="6" required />
+
                                 </div>
                             </div>
 
