@@ -1,30 +1,30 @@
-let submit = document.querySelector('.submit');
+let form = document.querySelector('#c-form');
 
 function validatePassword(e) {
-
-    alert('test');
 
     const pw = document.querySelector('#pw');
     const pwConfirm = document.querySelector('#pw-confirm');
 
-    const pwValue = pw.getAttribute('value');
-    const pwConfirmValue = pwConfirm.getAttribute('value');
-
-    console.log('value ' + pwValue);
+    const pwValue = pw.value;
+    const pwConfirmValue = pwConfirm.value;
 
     if( pwValue === null || pwConfirmValue === null || pwValue !== pwConfirmValue ){
+
+        e.preventDefault();
         
-        pw.classList.add('error');
-        pwConfirm.classList.add('error');
+        if( document.querySelector('.error') === null ){
+            pw.classList.add('error');
+            pwConfirm.classList.add('error');
 
-        const errorMessage = document.createElement('span');
-        errorMessage.classList.add('error');
-        errorMessage.innerText = '* Passwords do not match';
+            const errorMessage = document.createElement('span');
+            errorMessage.classList.add('error');
+            errorMessage.innerText = '* Passwords do not match';
 
-        pw.parentElement.appendChild(errorMessage);
+            pw.parentElement.appendChild(errorMessage);
+        }
 
     } 
 
 }
 
-submit.addEventListener('click', validatePassword );
+form.addEventListener('submit', validatePassword );
