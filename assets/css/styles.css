@@ -265,6 +265,16 @@ input[type=password]{
     input[type=email]:valid + .validity::before,
     input[type=tel]:valid + .validity::before,
     input[type=password]:valid + .validity::before{
+        content: "\f00c";
+        color:  var(--persian-green);
+        opacity: 1;}
+
+    input[type=text]:not(:placeholder-shown):invalid + .validity::before,
+    input[type=email]:not(:placeholder-shown):invalid + .validity::before,
+    input[type=tel]:not(:placeholder-shown):invalid + .validity::before,
+    input[type=password]:not(:placeholder-shown):invalid + .validity::before{
+        content: "\f00d";
+        color:  red;
         opacity: 1;}
 
     input[type=text].error,
@@ -274,8 +284,6 @@ input[type=password]{
         border-color: red;}
 
 .validity::before{
-    content: "\f00c";
-    color:  var(--persian-green);
     font-family: 'Font Awesome 5 Free';
     font-size: 1.25rem;
     font-weight: 900;
